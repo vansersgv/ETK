@@ -9,7 +9,7 @@ let profileContainer = document.createElement('div');
 profileContainer.className = 'profile-container';
 
 let img = document.createElement('img');
-img.src = '../img/fotoprueba.png';
+img.src = './img/fotoprueba.png';
 //img.alt = 'Foto de perfil';
 img.className = 'profile-picture';
 
