@@ -111,7 +111,7 @@ a1.className = 'button';
 a1.textContent = '¿Cómo llegar?';
 
 let a2 = document.createElement('a');
-a2.href = '#';
+a2.href = 'calculadora.html';
 a2.className = 'button';
 a2.textContent = 'Visitar';
 

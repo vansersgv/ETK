@@ -16,7 +16,7 @@ let c3 = document.createElement('label');
 c3.innerHTML = 'Abono semanal mínimo de $844 y máximo de $7,523';
 
 let c4 = document.createElement('span');
-c4.innerHTML = '$<input class="my-input" type="number" value="844">';
+c4.innerHTML = '$<input id="abonoSemanalInput" class="my-input" type="number" value="844">';
 
 let divider2 = document.createElement('div');
 divider2.className = 'divider';
@@ -25,16 +25,16 @@ let c5 = document.createElement('p');
 c5.innerHTML = 'Pago inicial mínimo de $2.621 y máximo de $8.185';
 
 let c6 = document.createElement('span');
-c6.innerHTML = '$<input class="my-input" type="number" value="2.621">';
+c6.innerHTML = '$<input id="pagoInicialInput" class="my-input" type="number" value="2621">';
 
 let divider3 = document.createElement('div');
 divider3.className = 'divider';
 
 let c7 = document.createElement('p');
-c7.innerHTML = 'Bonificación de interes moratorios mínimos de $00 y máximo de $923';
+c7.innerHTML = 'Bonificación de interes moratorios mínimos de $0 y máximo de $923';
 
 let c8 = document.createElement('span');
-c8.innerHTML = '$<input class="my-input" type="number" value="923">';
+c8.innerHTML = '$<input id="bonificacionInput" class="my-input" type="number" value="923">';
 
 let divider4 = document.createElement('div');
 divider4.className = 'divider';
@@ -51,6 +51,7 @@ let b2 = document.createElement('button');
 b2.href = '#';
 b2.className = 'button';
 b2.textContent = 'Continuar';
+b2.addEventListener('click', calcularAbono);
 
 calculadoraContainer.appendChild(c1);
 calculadoraContainer.appendChild(c2);
@@ -64,10 +65,37 @@ calculadoraContainer.appendChild(divider3);
 calculadoraContainer.appendChild(c7);
 calculadoraContainer.appendChild(c8);
 calculadoraContainer.appendChild(divider4);
-calculadoraContainer.appendChild(b1);
-calculadoraContainer.appendChild(b2);
+calculadoraContainer.appendChild(buttonContainer);
+
 buttonContainer.appendChild(b1);
 buttonContainer.appendChild(b2);
 
 app.appendChild(calculadoraContainer);
-calculadoraContainer.appendChild(buttonContainer);
+
+// function calcularAbono() {
+//     let actualPayment = 422; // Valor fijo proporcionado en el texto
+//     let abonoSemanal = parseFloat(document.getElementById("abonoSemanalInput").value);
+//     let pagoInicial = parseFloat(document.getElementById("pagoInicialInput").value);
+//     let bonificacion = parseFloat(document.getElementById("bonificacionInput").value);
+    
+//     // Realizar cálculos aquí con los valores proporcionados
+//     // Aquí puedes mostrar los resultados, por ejemplo:
+//     let totalPagar = actualPayment + abonoSemanal + pagoInicial - bonificacion;
+//     alert("El total a pagar es: $" + totalPagar);
+// }
+
+function calcularAbono() {
+    let actualPayment = 422; // Valor fijo proporcionado en el texto
+    let abonoSemanal = parseFloat(document.getElementById("abonoSemanalInput").value);
+    let pagoInicial = parseFloat(document.getElementById("pagoInicialInput").value);
+    let bonificacion = parseFloat(document.getElementById("bonificacionInput").value);
+    
+    // Realizar cálculos aquí con los valores proporcionados
+    let totalPagar = actualPayment + abonoSemanal + pagoInicial - bonificacion;
+    
+    // Generar la URL de la siguiente página con el resultado del cálculo en los parámetros de consulta
+    let nextPageURL = 'file:///C:/Users/segav/Desktop/ETK/index.html?totalPagar=' + totalPagar.toFixed(2);
+    
+    // Redirigir a la siguiente página
+    window.location.href = nextPageURL;
+}
