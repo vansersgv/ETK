@@ -78,7 +78,7 @@ b1.className = 'button';
 b1.textContent = 'Cancelar';
 
 let b2 = document.createElement('button');
-b2.href = 'https://etk-pi.vercel.app/';
+b2.href = 'index.html';
 b2.className = 'button';
 b2.textContent = 'Continuar';
 b2.addEventListener('click', calcularAbono);
