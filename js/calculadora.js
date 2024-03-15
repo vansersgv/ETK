@@ -13,10 +13,20 @@ let divider1 = document.createElement('div');
 divider1.className = 'divider';
 
 let c3 = document.createElement('label');
-c3.innerHTML = 'Abono semanal mínimo de $844 y máximo de $7,523';
+c3.innerHTML = 'Abono semanal mínimo de $844 y máximo de $7.523';
 
 let c4 = document.createElement('span');
-c4.innerHTML = '$<input id="abonoSemanalInput" class="my-input" type="number" value="844">';
+c4.innerHTML = '$';
+
+let input = document.createElement('input');
+input.id = 'abonoSemanalInput';
+input.className = 'my-input';
+input.type = 'number';
+input.min = 844;
+input.max = 7523;
+input.value = 844;
+
+c4.appendChild(input);
 
 let divider2 = document.createElement('div');
 divider2.className = 'divider';
@@ -25,7 +35,17 @@ let c5 = document.createElement('p');
 c5.innerHTML = 'Pago inicial mínimo de $2.621 y máximo de $8.185';
 
 let c6 = document.createElement('span');
-c6.innerHTML = '$<input id="pagoInicialInput" class="my-input" type="number" value="2621">';
+c6.innerHTML = '$';
+
+let input1 = document.createElement('input');
+input1.id = 'PagoInicialInput';
+input1.className = 'my-input';
+input1.type = 'number';
+input1.min = 2.621;
+input1.max = 8.185;
+input1.value = 2.621;
+
+c6.appendChild(input1);
 
 let divider3 = document.createElement('div');
 divider3.className = 'divider';
@@ -34,7 +54,17 @@ let c7 = document.createElement('p');
 c7.innerHTML = 'Bonificación de interes moratorios mínimos de $0 y máximo de $923';
 
 let c8 = document.createElement('span');
-c8.innerHTML = '$<input id="bonificacionInput" class="my-input" type="number" value="923">';
+c8.innerHTML = '$';
+
+let input2 = document.createElement('input');
+input2.id = 'BonificacionInput';
+input2.className = 'my-input';
+input2.type = 'number';
+input2.min = 0;
+input2.max = 923;
+input2.value = 0;
+
+c8.appendChild(input2);
 
 let divider4 = document.createElement('div');
 divider4.className = 'divider';
