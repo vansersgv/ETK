@@ -94,7 +94,7 @@ function calcularAbono() {
     let totalPagar = actualPayment + abonoSemanal + pagoInicial - bonificacion;
     
     // Generar la URL de la siguiente página con el resultado del cálculo en los parámetros de consulta
-    let nextPageURL = 'file:///C:/Users/segav/Desktop/ETK/index.html?totalPagar=' + totalPagar.toFixed(2);
+    let nextPageURL = 'file:/index.html?totalPagar=' + totalPagar.toFixed(2);
     
     // Redirigir a la siguiente página
     window.location.href = nextPageURL;
