@@ -39,7 +39,7 @@ let c6 = document.createElement("span");
 c6.innerHTML = "$";
 
 let input1 = document.createElement("input");
-input1.id = "PagoInicialInput";
+input1.id = "pagoInicialInput";
 input1.className = "my-input";
 input1.type = "number";
 input1.min = 2621;
@@ -59,7 +59,7 @@ let c8 = document.createElement("span");
 c8.innerHTML = "$";
 
 let input2 = document.createElement("input");
-input2.id = "BonificacionInput";
+input2.id = "bonificacionInput";
 input2.className = "my-input";
 input2.type = "number";
 input2.min = 0;
@@ -132,7 +132,7 @@ function calcularAbono() {
 
   // Generar la URL de la siguiente página con el resultado del cálculo en los parámetros de consulta
   let nextPageURL =
-    "https://etk-pi.vercel.app/index.html?totalPagar=" + totalPagar.toFixed(2);
+    "https://etk-pi.vercel.app/?totalPagar=" + totalPagar.toFixed(2);
 
   // Redirigir a la siguiente página
   window.location.href = nextPageURL;
