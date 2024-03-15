@@ -26,6 +26,7 @@ input.type = "number";
 input.min = 844;
 input.max = 7523;
 input.value = 844;
+input.pattern = "\\d*";
 
 c4.appendChild(input);
 
@@ -45,6 +46,7 @@ input1.type = "number";
 input1.min = 2621;
 input1.max = 8185;
 input1.value = 2621;
+input1.pattern = "\\d*";
 
 c6.appendChild(input1);
 
@@ -65,6 +67,7 @@ input2.type = "number";
 input2.min = 0;
 input2.max = 923;
 input2.value = 0;
+input2.pattern = "\\d*";
 
 c8.appendChild(input2);
 
